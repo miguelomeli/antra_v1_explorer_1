@@ -4,10 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node --stack-size=10000 ./bin/cluster",
-    "stopW": "taskkill /f /im node.exe",
-    "stopL": "kill -2 $(cat tmp/cluster.pid)",
-    "stop": "killall -s KILL node",
-    "test": "node ./node_modules/jasmine/bin/jasmine.js"
+    "stopW": "killall -s KILL node",
+    "test": "taskkill /f /im node.exe"
   },
   "dependencies": {
     "express": "~4.2.0",
