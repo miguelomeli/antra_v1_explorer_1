@@ -130,25 +130,13 @@ html
         .col-md-2.col-md-offset-1
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              if settings.nethash_units == 'K'
-                strong #{settings.locale.network} (KH/s)
-              else if settings.nethash_units == 'M'
-                strong #{settings.locale.network} (MH/s)
-              else if settings.nethash_units == 'G'
-                strong #{settings.locale.network} (GH/s)
-              else if settings.nethash_units == 'T'
-                strong #{settings.locale.network} (TH/s)
-              else if settings.nethash_units == 'P'
-                strong #{settings.locale.network} (PH/s)
-              else if settings.nethash_units == 'H'
-                strong #{settings.locale.network} (H/s)
+              strong USD PRICE
             .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#hashrate - 
+               label#difficulty2 $0.6
                <br>
-               label#lblX1  
-              else  
-               label#hashrate - 
+               label &nbsp;
+
+
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
@@ -178,12 +166,9 @@ html
             .panel-heading
               strong #{settings.markets.exchange} Price
             .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#lastPrice -
+               label#lastPrice_ 0.00009071 
                <br>
-               label#lblX1
-              else
-               label#lastPrice - 
+               label &nbsp;
                  
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      
